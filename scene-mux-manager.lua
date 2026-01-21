@@ -134,21 +134,23 @@ end
 function update_source_visibility(state)
     local scene_name = 'Scene MUX'
 
-    set_item_visible(scene_name, 'Minecraft', true)
-
     if state == 'Normal' then
-        set_item_visible(scene_name, 'Wide View', false)
+        set_item_visible(scene_name, 'Minecraft', true)
+		set_item_visible(scene_name, 'Wide View', false)
         set_item_visible(scene_name, 'Thin View', false)
         set_item_visible(scene_name, 'Eye Measure', false)
     elseif state == 'Wide' then
+		set_item_visible(scene_name, 'Minecraft', false)
         set_item_visible(scene_name, 'Wide View', true)
         set_item_visible(scene_name, 'Thin View', false)
         set_item_visible(scene_name, 'Eye Measure', false)
     elseif state == 'Thin' then
+		set_item_visible(scene_name, 'Minecraft', false)
         set_item_visible(scene_name, 'Wide View', false)
         set_item_visible(scene_name, 'Thin View', true)
         set_item_visible(scene_name, 'Eye Measure', false)
     elseif state == 'Eye' then
+		set_item_visible(scene_name, 'Minecraft', false)
         set_item_visible(scene_name, 'Wide View', false)
         set_item_visible(scene_name, 'Thin View', false)
         set_item_visible(scene_name, 'Eye Measure', true)
